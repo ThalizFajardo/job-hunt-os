@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"\\\"C:\\\\\\\\Program Files\\\\\\\\nodejs\\\\\\\\node.exe\\\" \\\"C:\\\\\\\\Users\\\\\\\\fajar\\\\\\\\OneDrive\\\\\\\\Documentos\\\\\\\\PROYECTOSCODING\\\\\\\\Job Hunt OS\\\\\\\\applications\\\\\\\\node_modules\\\\\\\\typescript\\\\\\\\bin\\\\\\\\tsc\\\" --project \\\"C:\\\\\\\\Users\\\\\\\\fajar\\\\\\\\OneDrive\\\\\\\\Documentos\\\\\\\\PROYECTOSCODING\\\\\\\\Job Hunt OS\\\\\\\\applications\\\\\\\\node_modules\\\\\\\\.federation\\\\\\\\tsconfig.489c595192dcdb5fb3e907b13ce7e72d.json\\\"\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\fajar\\\\OneDrive\\\\Documentos\\\\PROYECTOSCODING\\\\Job Hunt OS\\\\applications\\\\node_modules\\\\typescript\\\\bin\\\\tsc\" --project \"C:\\\\Users\\\\fajar\\\\OneDrive\\\\Documentos\\\\PROYECTOSCODING\\\\Job Hunt OS\\\\applications\\\\node_modules\\\\.federation\\\\tsconfig.489c595192dcdb5fb3e907b13ce7e72d.json\""
+    },
+    "timestamp": 1791482242397
+  }
+}
