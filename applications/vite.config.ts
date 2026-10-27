@@ -1,7 +1,7 @@
 import { federation } from '@module-federation/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-
+import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   server:{
@@ -10,7 +10,7 @@ export default defineConfig({
   },
   base : 'http://localhost:5001',  
   plugins: [
-    react(), 
+    react(),tailwindcss(), 
   federation({
     name : 'applications', 
     filename : 'applicationsRemote.js', 

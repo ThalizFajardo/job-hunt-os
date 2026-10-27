@@ -1,7 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { federation } from "@module-federation/vite";
-
+import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   server: {
@@ -24,8 +24,14 @@ export default defineConfig({
           name: "interviews",
           entry: "http://localhost:5002/interviewsRemote.js",
         },
+        companies :{
+          type : 'module', 
+          name :'companies', 
+          entry : 'http://localhost:5003/companiesRemote.js'
+        },
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),
+    tailwindcss()
   ],
 });

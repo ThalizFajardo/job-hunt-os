@@ -13,3 +13,10 @@ declare module 'interviews/InterviewsApp'{
 
   export default InterviewsApp;
 }
+declare module 'companies/CompaniesApp'{
+  import type { ComponentType } from "react";
+
+  const CompaniesApp: ComponentType
+
+  export default CompaniesApp
+}
