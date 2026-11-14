@@ -1,0 +1,14 @@
+{
+  "name": "Job Hunt OS",
+  "lockfileVersion": 3,
+  "requires": true,
+  "private": true,
+  "workspaces": [
+    "host",
+    "applications",
+    "companies",
+    "interviews Remote",
+    "shared/contracts"
+  ],
+  "packages": {}
+}

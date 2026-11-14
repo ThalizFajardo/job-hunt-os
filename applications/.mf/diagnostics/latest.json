@@ -1,10 +1,10 @@
 {
   "latestErrorEvent": {
     "code": "TYPE-001",
-    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"\\\"C:\\\\\\\\Program Files\\\\\\\\nodejs\\\\\\\\node.exe\\\" \\\"C:\\\\\\\\Users\\\\\\\\fajar\\\\\\\\OneDrive\\\\\\\\Documentos\\\\\\\\PROYECTOSCODING\\\\\\\\Job Hunt OS\\\\\\\\applications\\\\\\\\node_modules\\\\\\\\typescript\\\\\\\\bin\\\\\\\\tsc\\\" --project \\\"C:\\\\\\\\Users\\\\\\\\fajar\\\\\\\\OneDrive\\\\\\\\Documentos\\\\\\\\PROYECTOSCODING\\\\\\\\Job Hunt OS\\\\\\\\applications\\\\\\\\node_modules\\\\\\\\.federation\\\\\\\\tsconfig.d9b9ff5bc97a33b011a2bc2a5c9ef6b0.json\\\"\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"\\\"C:\\\\\\\\Program Files\\\\\\\\nodejs\\\\\\\\node.exe\\\" \\\"C:\\\\\\\\Users\\\\\\\\fajar\\\\\\\\OneDrive\\\\\\\\Documentos\\\\\\\\PROYECTOSCODING\\\\\\\\Job Hunt OS\\\\\\\\node_modules\\\\\\\\typescript\\\\\\\\bin\\\\\\\\tsc\\\" --project \\\"C:\\\\\\\\Users\\\\\\\\fajar\\\\\\\\OneDrive\\\\\\\\Documentos\\\\\\\\PROYECTOSCODING\\\\\\\\Job Hunt OS\\\\\\\\applications\\\\\\\\node_modules\\\\\\\\.federation\\\\\\\\tsconfig.d242fdb23fc60a4fff82afe84ec6e8bb.json\\\"\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
     "args": {
-      "cmd": "\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\fajar\\\\OneDrive\\\\Documentos\\\\PROYECTOSCODING\\\\Job Hunt OS\\\\applications\\\\node_modules\\\\typescript\\\\bin\\\\tsc\" --project \"C:\\\\Users\\\\fajar\\\\OneDrive\\\\Documentos\\\\PROYECTOSCODING\\\\Job Hunt OS\\\\applications\\\\node_modules\\\\.federation\\\\tsconfig.d9b9ff5bc97a33b011a2bc2a5c9ef6b0.json\""
+      "cmd": "\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\fajar\\\\OneDrive\\\\Documentos\\\\PROYECTOSCODING\\\\Job Hunt OS\\\\node_modules\\\\typescript\\\\bin\\\\tsc\" --project \"C:\\\\Users\\\\fajar\\\\OneDrive\\\\Documentos\\\\PROYECTOSCODING\\\\Job Hunt OS\\\\applications\\\\node_modules\\\\.federation\\\\tsconfig.d242fdb23fc60a4fff82afe84ec6e8bb.json\""
     },
-    "timestamp": 1793071259108
+    "timestamp": 1794538424415
   }
 }

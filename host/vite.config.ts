@@ -24,14 +24,17 @@ export default defineConfig({
           name: "interviews",
           entry: "http://localhost:5002/interviewsRemote.js",
         },
-        companies :{
-          type : 'module', 
-          name :'companies', 
-          entry : 'http://localhost:5003/companiesRemote.js'
+        companies: {
+          type: "module",
+          name: "companies",
+          entry: "http://localhost:5003/companiesRemote.js",
         },
       },
       shared: ["react", "react-dom", "react-router-dom"],
+      dts: {
+        consumeTypes: false,
+      },
     }),
-    tailwindcss()
+    tailwindcss(),
   ],
 });

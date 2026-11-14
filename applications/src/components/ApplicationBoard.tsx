@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type {
   ApplicationStageChangedPayload,
   Application,
@@ -15,78 +15,52 @@ const stages = [
   "rejected",
 ] as const;
 
-const dummiesApplications: Application[] = [
-  {
-    id: "app-001",
-    company: "OpenAI",
-    role: "Frontend Developer",
-    stage: "technical",
-  },
-  {
-    id: "app-002",
-    company: "Mercado Libre",
-    role: "React Developer",
-    stage: "screening",
-  },
-  {
-    id: "app-003",
-    company: "Globant",
-    role: "Frontend Engineer",
-    stage: "applied",
-  },
-  {
-    id: "app-004",
-    company: "Kavak",
-    role: "Software Engineer",
-    stage: "rejected",
-  },
-];
 
-const ApplicationBoard = () => {
-  
-  
-  
-    const [application, setApplication] =
-    useState<Application>(dummiesApplications);
 
- const handleDragEnd = (event: DragEndEvent) => {
-  const { active, over } = event;
-
-  if (!over) return;
-
-  const applicationId = active.id.toString();
-  const newStage = over.id as ApplicationStage;
-
-  setApplication((prev) =>
-    prev.map((application) =>
-      application.id === applicationId
-        ? { ...application, stage: newStage }
-        : application
-    )
-  );
-
-  window.dispatchEvent(
-    new CustomEvent<ApplicationStageChangedPayload>(
-      "application:stage-changed",
-      {
-        detail: {
-          applicationId,
-          stage: newStage,
-        },
-      }
-    )
-  );
+type Props = {
+  application: Application[];
+  setApplication :Dispatch<SetStateAction<Application[]>>;
 };
+
+const ApplicationBoard = ({ application,setApplication }: Props) => {
+  const handleDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event;
+
+    if (!over) return;
+
+    const applicationId = active.id.toString();
+    const newStage = over.id as ApplicationStage;
+
+    setApplication((prev) =>
+      prev.map((application) =>
+        application.id === applicationId
+          ? { ...application, stage: newStage }
+          : application,
+      ),
+    );
+
+    window.dispatchEvent(
+      new CustomEvent<ApplicationStageChangedPayload>(
+        "application:stage-changed",
+        {
+          detail: {
+            applicationId,
+            stage: newStage,
+          },
+        },
+      ),
+    );
+  };
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
-      <div className="flex">
-       {stages.map((stage) => (
+      <div className="grid grid-cols-5 gap-3">
+        {stages.map((stage) => (
           <ApplicationColumn
             key={stage}
             stage={stage}
             applications={application.filter(
-              (application) => application.stage === stage
+              (application) => application.stage === stage,
             )}
           />
         ))}

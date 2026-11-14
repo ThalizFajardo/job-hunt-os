@@ -13,7 +13,7 @@ const ApplicationColumn = ({ stage, applications }: Props) => {
   return (
     <section
       ref={setNodeRef}
-      className="min-h-[500px] rounded-xl bg-gray-50 p-4 border"
+      className="min-h-[500px] rounded-xl bg-gray-50 p-4 "
     >
       <h2>{stage}</h2>
       {applications.map((application) => (

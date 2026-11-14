@@ -15,7 +15,10 @@ export default defineConfig({
     name : 'applications', 
     filename : 'applicationsRemote.js', 
     exposes : { './ApplicationsApp': './src/ApplicationsApp.tsx' },
-    shared : ["react", "react-dom",  "react-router-dom"]
+    shared : ["react", "react-dom",  "react-router-dom"], 
+     dts: {
+    generateTypes: false,
+  },
   })
   ],
   build: {

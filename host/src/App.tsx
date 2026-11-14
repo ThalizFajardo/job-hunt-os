@@ -1,11 +1,9 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import "./App.css";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import "./index.css";
+import { Link, Route, Routes, useLocation, Navigate } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import type {
   ApplicationStageChangedPayload,
-  Application,
-  ApplicationStage,
 } from "@job-hunt/contracts";
 
 const ApplicationsApp = lazy(() => import("applications/ApplicationsApp"));
@@ -15,6 +13,7 @@ const InterviewsApp = lazy(() => import("interviews/InterviewsApp"));
 const CompaniesApp = lazy(() => import("companies/CompaniesApp"));
 
 function App() {
+const location = useLocation();
   const [technicalCount, setTechnicalCount] = useState(0);
 
   useEffect(() => {
@@ -37,8 +36,7 @@ function App() {
   }, []);
 
   return (
-    <>
-      <BrowserRouter>
+    <>    
         <div className="flex">
           <nav>
             <div className="relative flex h-[calc(100vh)] w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
@@ -47,7 +45,7 @@ function App() {
                   Sidebar
                 </h5>
               </div>
-              <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
+              <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700 ">
                 <div
                   role="button"
                   className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
@@ -58,7 +56,7 @@ function App() {
                       viewBox="0 0 24 24"
                       fill="currentColor"
                       aria-hidden="true"
-                      className="w-5 h-5"
+                      className="w-5 h-5 "
                     >
                       <path
                         fill-rule="evenodd"
@@ -80,7 +78,7 @@ function App() {
                       viewBox="0 0 24 24"
                       fill="currentColor"
                       aria-hidden="true"
-                      className="w-5 h-5"
+                      className="w-5 h-5 opacity-50 cursor-not-allowed pointer-events-none"
                     >
                       <path
                         fill-rule="evenodd"
@@ -89,18 +87,18 @@ function App() {
                       ></path>
                     </svg>
                   </div>
-                  <Link to="/interviews">Interviews</Link>
-                  <div className="grid ml-auto place-items-center justify-self-end">
+                  <Link to="/interviews" className="opacity-50 ">Interviews</Link>
+                  <div className="grid ml-auto place-items-center justify-self-end opacity-50 cursor-not-allowed pointer-events-none">
                     <div className="relative grid items-center px-2 py-1 font-sans text-xs font-bold uppercase rounded-full select-none whitespace-nowrap bg-blue-gray-500/20 text-blue-gray-900">
-                      <span className="">14</span>
+                      <span className="">{technicalCount}</span>
                     </div>
                   </div>
                 </div>
                 <div
                   role="button"
-                  className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+                  className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900 opacity-50"
                 >
-                  <div className="grid mr-4 place-items-center">
+                  <div className="grid mr-4 place-items-center opacity-50 ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -121,7 +119,7 @@ function App() {
                   role="button"
                   className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
                 >
-                  <div className="grid mr-4 place-items-center">
+                  <div className="grid mr-4 place-items-center opacity-50 cursor-not-allowed pointer-events-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -136,40 +134,20 @@ function App() {
                       ></path>
                     </svg>
                   </div>
-
-                  <Link to="/companies">Companies</Link>
-                </div>
-                <div
-                  role="button"
-                  className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
-                >
-                  <div className="grid mr-4 place-items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  Log Out
-                </div>
+                  <Link to="/companies" className="opacity-50 ">Companies</Link>
+                </div>                
               </nav>
             </div>
           </nav>
-          <main>
-          <p>Technical interviews: {technicalCount}</p>
+          <main className="w-full">
+        
           <Routes>
+            
+            <Route path="/" element={<Navigate to="/applications" replace />} />
             <Route
               path="/applications/*"
               element={
-                <ErrorBoundary>
+                <ErrorBoundary key={location.pathname}>
                   <Suspense fallback={<p>Loading applications...</p>}>
                     <ApplicationsApp />
                   </Suspense>
@@ -198,9 +176,7 @@ function App() {
             />
           </Routes>
           </main>
-        </div>
-
-      </BrowserRouter>
+        </div>    
     </>
   );
 }
