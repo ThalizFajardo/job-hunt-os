@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import ApplicationsApp from './ApplicationsApp'
 
 function App() {
