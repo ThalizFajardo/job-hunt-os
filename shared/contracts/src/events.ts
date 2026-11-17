@@ -1,4 +1,4 @@
-import { ApplicationStage } from "./applications";
+import type { ApplicationStage } from "./applications";
 
 export type ApplicationStageChangedPayload ={
     applicationId : string; 
