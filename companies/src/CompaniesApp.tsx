@@ -1,6 +1,6 @@
 const CompaniesApp = () => {
   return (
-    <div>CompaniesApp desde remote companies</div>
+    <div>🔒 Companies — Coming soon</div>
   )
 }
 

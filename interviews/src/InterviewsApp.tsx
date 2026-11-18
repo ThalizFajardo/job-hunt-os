@@ -1,7 +1,7 @@
 
 const InterviewsApp = () => {
   return (
-    <div>InterviewsApp desde remote </div>
+    <div> 🔒 Interviews — Coming soon</div>
   )
 }
 
