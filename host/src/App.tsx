@@ -87,7 +87,7 @@ const location = useLocation();
                       ></path>
                     </svg>
                   </div>
-                  <Link to="/interviews" className="opacity-50 ">Interviews</Link>
+                  <Link to="/interviews" className="opacity-50 cursor-not-allowed">Interviews</Link>
                   <div className="grid ml-auto place-items-center justify-self-end opacity-50 cursor-not-allowed pointer-events-none">
                     <div className="relative grid items-center px-2 py-1 font-sans text-xs font-bold uppercase rounded-full select-none whitespace-nowrap bg-blue-gray-500/20 text-blue-gray-900">
                       <span className="">{technicalCount}</span>
@@ -96,9 +96,9 @@ const location = useLocation();
                 </div>
                 <div
                   role="button"
-                  className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900 opacity-50"
+                  className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900 opacity-50 cursor-not-allowed"
                 >
-                  <div className="grid mr-4 place-items-center opacity-50 ">
+                  <div className="grid mr-4 place-items-center opacity-50 cursor-not-allowed ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -134,7 +134,7 @@ const location = useLocation();
                       ></path>
                     </svg>
                   </div>
-                  <Link to="/companies" className="opacity-50 ">Companies</Link>
+                  <Link to="/companies" className="opacity-50 cursor-not-allowed">Companies</Link>
                 </div>                
               </nav>
             </div>
